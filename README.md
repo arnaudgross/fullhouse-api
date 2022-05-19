@@ -6,7 +6,8 @@
 
 ## Installation
 `> npm install`
-`docker compose up`
+
+`> docker compose up`
 
 ## Démarrer le serveur
 `> npm start`
