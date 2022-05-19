@@ -1,0 +1,23 @@
+version: '3'
+ 
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fullhouse
+      MYSQL_USER: fullhouse
+      MYSQL_PASSWORD: fullhouse
+    ports:
+      - "3306:3306"
+    volumes:
+      - datasql:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  datasql:
